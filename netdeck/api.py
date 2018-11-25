@@ -21,6 +21,12 @@ def get_card(card_id):
     return requests.get(url).json()
 
 
+def get_cards():
+    url = f'{BASE_URL}/api/2.0/public/cards'
+
+    return requests.get(url).json()
+
+
 def get_pack(pack_code):
     url = f'{BASE_URL}/api/2.0/public/pack/{pack_code}'
 

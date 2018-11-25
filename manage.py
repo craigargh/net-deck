@@ -1,11 +1,25 @@
-from netdeck import deck, images, html
+import json
 
-current_deck = deck.retrieve('https://netrunnerdb.com/en/deck/view/752593')
-card_paths = images.card_paths(current_deck)
+from netdeck import deck, images, html, image_maps
 
-generate_html = html.generate('test_deck', card_paths)
 
-deck_name = current_deck['name']
+def build_deck():
+    current_deck = deck.retrieve('https://netrunnerdb.com/en/deck/view/1201811')
+    card_paths = images.card_paths(current_deck)
 
-with open(f'decks/{deck_name}.html', 'w+') as deck_file:
-    deck_file.write(generate_html)
+    generate_html = html.generate(card_paths)
+
+    deck_name = current_deck['name']
+
+    with open(f'decks/{deck_name}.html', 'w+') as deck_file:
+        deck_file.write(generate_html)
+
+
+def build_cards_map():
+    all_paths = image_maps.build()
+
+    with open('netdeck/image_paths.json', 'w+') as image_paths:
+        json.dump(all_paths, image_paths, indent=4, sort_keys=True)
+
+
+build_cards_map()
