@@ -33,6 +33,9 @@ def format_path(position, name, digits=2, title_case=False):
         else:
             name = name.title()
 
+        if ' In ' in name:
+            name = name.replace(' In ', ' in ')
+
     name = name \
         .replace("'", "_") \
         .replace('&', "_") \

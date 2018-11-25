@@ -55,7 +55,9 @@ def make_packs_map(packs):
 
 
 def pack_details(pack_data):
-    pack_type = 'data_pack' if pack_data['size'] == 20 else 'big_box'
+    is_data_pack = pack_data['size'] and 19 <= pack_data['size'] <= 20
+
+    pack_type = 'data_pack' if is_data_pack else 'big_box'
 
     return {
         'pack_name': pack_data['name'],
