@@ -27,6 +27,9 @@ def card_path(card):
 def format_path(position, name, digits=2, title_case=False):
     position_string = f'{position}'.rjust(digits, '0')
 
+    if name == 'Dai V':
+        position_string = '005'
+
     if name == "Na'Not'K":
         name = 'Na_Not_k'
 
@@ -38,6 +41,9 @@ def format_path(position, name, digits=2, title_case=False):
 
         if ' In ' in name:
             name = name.replace(' In ', ' in ')
+
+        if 'Of The' in name:
+            name = name.replace('Of The', 'of the')
 
     name = name \
         .replace("'", "_") \
