@@ -49,7 +49,9 @@ def format_path(position, name, digits=2, title_case=False):
         .replace("'", "_") \
         .replace('&', "_") \
         .replace(':', ' -') \
-        .replace('"', '')
+        .replace('"', '') \
+        .replace('é', 'e') \
+        .replace('à', 'a')
 
     return f"{position_string} - {name}" \
         .replace(' ', '%20')
