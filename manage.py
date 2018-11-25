@@ -24,8 +24,10 @@ def build_cards_map():
 
 
 build_cards_map()
-build_deck('https://netrunnerdb.com/en/deck/view/1201811')
 build_deck('https://netrunnerdb.com/en/deck/view/752593')
-build_deck('https://netrunnerdb.com/en/deck/view/1204622')
-build_deck('https://netrunnerdb.com/en/deck/view/546597')
+build_deck('https://netrunnerdb.com/en/deck/view/751529')
+build_deck('https://netrunnerdb.com/en/deck/view/751527')
+build_deck('https://netrunnerdb.com/en/deck/view/751535')
+build_deck('https://netrunnerdb.com/en/deck/view/751542')
+build_deck('https://netrunnerdb.com/en/deck/view/752578')
 
