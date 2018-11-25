@@ -94,8 +94,8 @@ def make_cycles_map(cycles):
 def cycle_details(cycle):
     cycle_name = cycle['name']
 
-    if cycle_name == 'Core Set':
-        cycle_name = 'Core'
+    if 'Core Set' in cycle_name:
+        cycle_name = cycle_name.replace('Core Set', 'Core')
 
     return {
         'cycle_name': cycle_name,

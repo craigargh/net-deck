@@ -27,7 +27,10 @@ def card_path(card):
 def format_path(position, name, digits=2, title_case=False):
     position_string = f'{position}'.rjust(digits, '0')
 
-    if title_case:
+    if name == "Na'Not'K":
+        name = 'Na_Not_k'
+
+    elif title_case:
         if "'" in name:
             name = string.capwords(name)
         else:

@@ -23,4 +23,5 @@ def build_cards_map():
         json.dump(all_paths, image_paths, indent=4, sort_keys=True)
 
 
+build_cards_map()
 build_deck('https://netrunnerdb.com/en/deck/view/1201811')
