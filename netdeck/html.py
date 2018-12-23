@@ -10,5 +10,5 @@ def generate(card_paths):
 
 
 def img(card_path):
-    image_template = '<img src="../cards/{image_path}" width=240px/>'
+    image_template = '<img src="../cards/{image_path}" width=232px/>'
     return image_template.format(image_path=card_path)
